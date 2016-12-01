@@ -1,3 +1,18 @@
+<?php
+
+	//Test si les 3 cookies existent, si ils exsitent, ils redirigent vers l'index.php sinon il reste sur cette page pour se connecter.
+	if(isset($_COOKIE['pseudo']))
+	{
+		if(isset($_COOKIE['ville']))
+		{
+			if(isset($_COOKIE['id']))
+			{
+				header('Location:index.php');
+			}
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,13 +32,12 @@
 		</header>
 		
 		<main>
-		<!--<form method="POST" action "pageprincipale.php">
-		<div class="central">
-			<label for="pseudo"> pseudo</label><input type="text" name="pseudo"/>
-			<label for="ville"> ville</label><input type="text" name="ville"/>
-			<input class="inputsub" type=submit value="connexion"/>
-		</div>
-		</form>-->
+			<form method="POST" action="process_connexion.php">
+				<label>Pseudo : </label><input type="text" name="pseudo"/><br>
+				<label>Ville : </label><input type="text" name="ville"/><br>
+				<input type="submit" value="Envoyer" />
+			</form>	
+			
 
 		</main>
 		

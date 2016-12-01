@@ -1,6 +1,4 @@
 <?php 
-
-	session_start();
 	
 	//Check si un pseudo a été passé en paramètre
 	if(!isset($_POST['pseudo']))
@@ -54,5 +52,5 @@
 	setcookie("ville",$ville,(time()+$int));
 	setcookie("id",$id,(time()+$int));
 	
-	header('Location:test.php');
+	header('Location:index.php');
 ?>
