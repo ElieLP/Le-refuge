@@ -1,6 +1,4 @@
 <header>
-	
-
 	<nav>
 		<div class="logo">
 			<a href="index.php">
@@ -44,7 +42,6 @@
 					<i class="fa fa-plus" aria-hidden="true" title="Ajout"></i>
 				</a>
 			</div>
-	
 		</div>
 	</nav>
 </header>

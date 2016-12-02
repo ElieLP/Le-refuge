@@ -26,8 +26,31 @@
 			map: map//la carte sur laquelle le marqueur doit être affiché
 		});
 		
-		console.log(tabMarqueurs[i].getPosition().lat());
-		console.log(tabMarqueurs[i].getPosition().lng());
+		var input = document.createElement("input");
+
+		input.setAttribute("type", "hidden");
+
+		input.setAttribute("name", "lat");
+
+		input.setAttribute("value", tabMarqueurs[i].getPosition().lat());
+
+		//append to form element that you want .
+		document.getElementById("form").appendChild(input);
+		
+		
+
+		var input = document.createElement("input");
+
+		input.setAttribute("type", "hidden");
+
+		input.setAttribute("name", "lng");
+
+		input.setAttribute("value", tabMarqueurs[i].getPosition().lng());
+
+		//append to form element that you want .
+		document.getElementById("form").appendChild(input);
+
+
 	
 		if(tabMarqueurs.length > 1){
 			tabMarqueurs[(i-1)].setMap(null);
@@ -38,11 +61,10 @@
 		}		
 		
 	});
-			
-	/********************************************/
 	
 }
     </script>
+	
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNYzzCd3Fz7giD-2Tmb6ZdQFywnPjErn0&callback=initMap">
     </script>

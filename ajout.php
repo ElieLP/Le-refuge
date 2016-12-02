@@ -16,8 +16,9 @@
 				</ul>
 	</nav>
 	
-	<form method="get" action="index.php">
-Nom du lieu : <input type="" name="FirstName" ><br>
+	
+	<form method="get" action="process_add.php" id="form">
+	Nom du lieu : <input type="" name="ville" ><br>
 	<select name="categorie">
 	<optgroup label="Vital">
 		  <option value="alimentation">Alimentation </option>
@@ -26,7 +27,7 @@ Nom du lieu : <input type="" name="FirstName" ><br>
 		  <option value="medical">Médical</option>
 	</optgroup>
 	<optgroup label="Administration">
-		  <option value="demarches ">Démarche administrative</option>
+		  <option value="demarches">Démarche administrative</option>
 		  <option value="juridiques">Démarche jurique</option>
 	</optgroup>
 	<optgroup label="Soutien">
@@ -39,6 +40,7 @@ Nom du lieu : <input type="" name="FirstName" ><br>
 	
 	
 		
+		
 		<i class="fa fa-gift" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="0" />
 		<i class="fa fa-eur" aria-hidden="True"></i>
@@ -47,8 +49,11 @@ Nom du lieu : <input type="" name="FirstName" ><br>
 		<input type="radio" name="chooseone" value="2" />
 		<i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="3" />
+		
+		<?php include('map_ajout.php');?>
+		
 	<input type="reset" value="Annuler"/>
-		<!-- attention reglé selection nom -->
+		
 		<input type="submit" value="Executer"/>
 		</form>
 </html>
