@@ -1,3 +1,9 @@
+<?php if(!isset($_COOKIE['id']))
+	{
+		header('Location: accueil.php');
+		exit;
+	}
+?>
 <!doctype html>
 <html>
 	<head>

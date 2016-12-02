@@ -33,7 +33,6 @@
 	</p>								
 	<?php
 	}
-	
 	$requeteCategorie->closeCursor();
 	
 ?>
