@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.4
+-- version 4.2.12deb2+deb8u2
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Jeu 01 Décembre 2016 à 22:01
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.5.8
+-- Host: localhost
+-- Generation Time: Dec 02, 2016 at 03:24 AM
+-- Server version: 5.5.53-0+deb8u1
+-- PHP Version: 5.6.27-0+deb8u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,51 +17,80 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `refuge`
+-- Database: `refuge`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ligne`
+-- Table structure for table `ligne`
 --
 
 CREATE TABLE IF NOT EXISTS `ligne` (
-  `id` int(200) NOT NULL AUTO_INCREMENT,
-  `coordonnee` multipoint NOT NULL,
+`id` int(200) NOT NULL,
+  `lat` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `lng` varchar(255) CHARACTER SET utf8 NOT NULL,
   `prix` int(4) NOT NULL,
-  `ville` varchar(30) NOT NULL,
-  `categorie` varchar(20) NOT NULL,
-  `sous_categorie` varchar(30) NOT NULL,
+  `ville` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `categorie` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `sous_categorie` varchar(30) CHARACTER SET utf8 NOT NULL,
   `id_user` int(200) NOT NULL COMMENT 'clé secondaire',
   `vote` int(4) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `nom` varchar(200) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(200) NOT NULL AUTO_INCREMENT,
+`id` int(200) NOT NULL,
   `pseudo` varchar(20) NOT NULL,
   `ville` varchar(30) NOT NULL,
-  `point` int(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `point` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contraintes pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Contraintes pour la table `ligne`
+-- Indexes for table `ligne`
 --
 ALTER TABLE `ligne`
-  ADD CONSTRAINT `ligne_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ ADD PRIMARY KEY (`id`), ADD KEY `id_user` (`id_user`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ligne`
+--
+ALTER TABLE `ligne`
+MODIFY `id` int(200) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `id` int(200) NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `ligne`
+--
+ALTER TABLE `ligne`
+ADD CONSTRAINT `ligne_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
