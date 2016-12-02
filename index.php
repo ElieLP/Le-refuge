@@ -37,6 +37,7 @@
 		
 		<footer>
 			<a href="Apropos.html" >A propos</a>
+			<a href="http://www.msf.fr/"><img src="img/medecins.png" /></a>
 		</footer>
 	</body>
 	
