@@ -36,6 +36,7 @@
 		</main>
 		
 		<footer>
+			<a href="Apropos.html" >A propos</a>
 		</footer>
 	</body>
 	

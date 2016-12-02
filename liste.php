@@ -6,6 +6,7 @@
 	if(isset($_GET['nom_categorie']) && isset($_COOKIE['ville']))
 	{
 		//récupération du nom de la catégorie (ou sous-catégorie) dans le formulaire
+		// A sécuriser
 		$categorie = $_GET['nom_categorie'];
 		
 		//selection de tous les champs de ligne où la catégorie ou la sous-catégorie vaut le nom_catégorie entré dans le formulaire
