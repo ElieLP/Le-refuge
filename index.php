@@ -12,7 +12,6 @@
 	</head>
 	
 	<body>
-		
 		<?php
 			include 'header.php';
 		?>
@@ -23,7 +22,7 @@
 			?>
 				
 			<?php
-				include 'map.php';
+				include 'mapPrincipale.php';
 			?>
 		</main>
 		
