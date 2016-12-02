@@ -15,32 +15,33 @@
 		while ($donneesCategorie = $requeteCategorie->fetch())
 		{
 		?>
-		<p>
-			<?php echo $donneesCategorie['nom']; ?> 
-		
-				<form method="get" action="">
-					<input type="hidden"  name="nom_categorie" value="<?php echo $categorie; ?>" />
-					<input type="hidden"  name="coordonnee" value="<?php echo $donneesCategorie['coordonnee']; ?>" />
-					<button type="submit"> <i class="fa fa-map-marker" aria-hidden="true"></i> Localiser</button>
-				</form>
+		<div class="rep">
+			<p>
+				<span class="txt">Lieu</span> : <?php echo $donneesCategorie['nom']; ?> 
+			
+					<form method="get" action="">
+						<input type="hidden"  name="nom_categorie" value="<?php echo $categorie; ?>" />
+						<input type="hidden"  name="lat" value="<?php echo $donneesCategorie['lat']; ?>" />
+						<input type="hidden"  name="lng" value="<?php echo $donneesCategorie['lng']; ?>" />
+						<button type="submit"> <i class="fa fa-map-marker" aria-hidden="true"></i> Localiser</button>
+					</form> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="txt">Prix</span> : 
 					<?php if($donneesCategorie['prix']==0)
-							echo '<i class="fa fa-gift" aria-hidden="true"></i>';
-						  elseif($donneesCategorie['prix']==1)
-							echo '<i class="fa fa-eur" aria-hidden="true"></i>';
-						  elseif($donneesCategorie['prix']==2)
-							echo '<i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i>';
-						  elseif($donneesCategorie['prix']==3)
-							echo '<i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i>';
+								echo '<i class="fa fa-gift" aria-hidden="true"></i>';
+							  elseif($donneesCategorie['prix']==1)
+								echo '<i class="fa fa-eur" aria-hidden="true"></i>';
+							  elseif($donneesCategorie['prix']==2)
+								echo '<i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i>';
+							  elseif($donneesCategorie['prix']==3)
+								echo '<i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i>';
 					?>
-		</p>								
+			</p>
+		</div>
 		<?php
 		}
 		
 		$requeteCategorie->closeCursor();
 	}
-	else
-	{
-		header('Location: accueil.php');
-		exit;
-	}
+	
+
 ?>

@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="fontawesome/css/font-awesome.css"> 
-<link rel="stylesheet" href="css/reset.css" />
-<link rel="stylesheet" href="style.css" />
-
 <header>
 	
 

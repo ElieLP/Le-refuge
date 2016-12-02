@@ -1,23 +1,72 @@
 /*BODY*/
 body {
 	background-color:#DEE8FA;
+	margin:0;
 	font-family: trebuchet ms;
 }
 
 /*HEADER*/
 header {
-	background-color:#c7d0e1;
-}
-header .logo, h1{
-	display: block;
+	display:block;
 	width:1100px;
-	font-family: Cursive;
-	font-size: 20px;
+	background-color:#fff;
 	margin: 0 auto;
-	padding:10px 0;
+	border-left:1px solid #b1b9c8;
+	border-right:1px solid #b1b9c8;
 }
-h1{
-	text-align: center;
+header nav{
+	display:block;
+	width:1100px;
+}
+header nav div{
+	display:inline-block;
+	vertical-align:top;
+}
+header nav .logo {
+	display:inline-block;
+	width:300px;
+}
+header nav .cate {
+	display:inline-block;
+	padding:10px 0 0 0;
+}
+header nav .souscate {
+	margin:0 10px;
+	border: 1px solid #404c61;
+	background-color:#A2BFF4;
+}
+header nav .souscate2 {
+	margin:0 10px;
+	padding:8px 11px;
+	background-color:#404c61;
+}
+header nav ul {
+	display:block;
+	padding:0;
+	margin:0;
+}
+header nav li {
+	padding:5px;
+	display:block;
+}
+header nav li:hover{
+	background-color:#7185aa;
+}
+header nav a {
+display:block;
+	text-decoration:none;
+	color:#fff;
+}
+header nav .lilourd {
+	display:block;
+	padding:5px;
+	background-color:#404c61;
+}
+header nav .lilourd:hover{
+	background-color:#303949;
+}
+header nav .lourd {
+	display:block;
 }
 
 /* MAIN	*/
@@ -35,14 +84,20 @@ main .presentation {
 	padding: 10px 15px;
 }
 form {
-	display: flex;
-	width:1000px;
+	display: inline;
 	margin: auto;
 	height: 100px;
-	padding-top: 250px;
-	margin-top: 50px;
 }
-
+.rep {
+	margin-top:10px;
+}
+p {
+	display:inline;
+	margin:0;
+}
+.txt {
+	text-decoration:underline;
+}
 /*FOOTER*/
 footer {
 	width:1100px;
