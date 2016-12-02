@@ -3,7 +3,7 @@
 	//connexion à la bdd
 	$bdd = new PDO("mysql:host=localhost;dbname=lol","root","");
 	
-	if(isset($_GET['nom_categorie']) && isset($_COOKIE['ville']))
+	if(isset($_GET['nom_categorie']))
 	{
 		//récupération du nom de la catégorie (ou sous-catégorie) dans le formulaire
 		$categorie = $_GET['nom_categorie'];
@@ -38,9 +38,5 @@
 		
 		$requeteCategorie->closeCursor();
 	}
-	else
-	{
-		header('Location: accueil.php');
-		exit;
-	}
+	
 ?>
