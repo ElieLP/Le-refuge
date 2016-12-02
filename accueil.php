@@ -18,7 +18,6 @@
 	<head>
 		<meta charset="utf8"/>
 		<link rel=stylesheet href='css/reset.css' />
-		<link rel=stylesheet href='css/simplegrid.css' />
 		<link rel=stylesheet href='css/base.css' />
 		
 		<title>Les Nymphormaticiens</title>
