@@ -19,7 +19,11 @@
 									echo '2.2595558';
 							?> };
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
+          zoom: <?php if(isset($_GET['lat']))
+									echo 15;
+								else
+									echo 5;
+							?>,
           center: Amiens
         });
         var marker = new google.maps.Marker({
