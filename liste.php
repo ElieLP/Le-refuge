@@ -1,11 +1,7 @@
 <?php
 	
 	//connexion à la bdd
-<<<<<<< HEAD
-	$bdd = new PDO("mysql:host=localhost;dbname=lol","root","");
-=======
 	$bdd = new PDO("mysql:host=localhost;dbname=refuge","root","");
->>>>>>> 918a8da87bd7840211cdd0ecb05decefd0141635
 	
 	//récupération du nom de la catégorie (ou sous-catégorie) dans le formulaire
 	$categorie = $_GET['nom_categorie'];
