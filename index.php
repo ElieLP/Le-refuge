@@ -22,7 +22,7 @@
 			?>
 				
 			<?php
-				include 'mapPrincipale.php';
+				include 'map.php';
 			?>
 		</main>
 		
