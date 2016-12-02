@@ -40,15 +40,15 @@
 	
 	
 		
-		
-		<i class="fa fa-gift" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="0" />
-		<i class="fa fa-eur" aria-hidden="True"></i>
+		<i class="fa fa-gift" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="1" />
-		<i class="fa fa-eur" aria-hidden="True"></i>	<i class="fa fa-eur" aria-hidden="True"></i>
+		<i class="fa fa-eur" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="2" />
-		<i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i>
+		<i class="fa fa-eur" aria-hidden="True"></i>	<i class="fa fa-eur" aria-hidden="True"></i>
 		<input type="radio" name="chooseone" value="3" />
+		<i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i><i class="fa fa-eur" aria-hidden="True"></i>
+		
 		
 		<?php include('map_ajout.php');?>
 		

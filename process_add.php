@@ -60,7 +60,7 @@
 	echo ($_COOKIE['pseudo'] . " ");
 	
 	$bdd = new PDO("mysql:host=localhost;dbname=refuge","root","");
-	$req = $bdd->prepare('INSERT INTO ligne(lat,lng,prix,ville,categorie,sous_categorie,id_user,vote,nom) VALUES (\'' . $_GET['lat'] . '\',\'' . $_GET['lng'] . '\',\'' . $_GET['chooseone'] . '\',\'' . $_GET['ville'] . '\',\'' . $categorie . '\',\'' . $sous_categorie . '\',\'' . $_COOKIE['id'] . '\',0,\'' . $_COOKIE['pseudo'] . '\');');
+	$req = $bdd->prepare('INSERT INTO ligne(lat,lng,prix,ville,categorie,sous_categorie,id_user,vote,nom) VALUES (\'' . $_GET['lat'] . '\',\'' . $_GET['lng'] . '\',\'' . $_GET['chooseone'] . '\',\'' . $_COOKIE['ville'] . '\',\'' . $categorie . '\',\'' . $sous_categorie . '\',\'' . $_COOKIE['id'] . '\',0,\'' . $_GET['ville'] . '\');');
 	$req->execute();
 	$req->closeCursor();
 	
